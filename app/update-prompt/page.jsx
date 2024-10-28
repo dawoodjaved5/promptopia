@@ -71,7 +71,6 @@ const PromptForm = () => {
     };
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
             <Form
                 type="Edit"
                 post={post}
@@ -79,8 +78,15 @@ const PromptForm = () => {
                 submitting={submitting}
                 handleSubmit={updatePrompt}
             />
-        </Suspense>
     );
 };
 
-export default PromptForm;
+const page = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <PromptForm />
+        </Suspense>
+    );
+}
+
+export default page;
