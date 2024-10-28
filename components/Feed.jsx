@@ -11,6 +11,8 @@ const PromptCardList = ({ data, handleTagClick }) => {
           key={post._id}
           post={post}
           handleTagClick={handleTagClick} // Pass handleTagClick function as a prop to handle tag clicks
+          handleEdit={{}}
+          handleDelete={{}}
         />
       ))}
     </div>
